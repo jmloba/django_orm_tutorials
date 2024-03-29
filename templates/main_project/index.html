@@ -1,0 +1,189 @@
+{% extends 'main_project/base.html'%}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <!-- about -->
+  <section id="about" class="m1">
+    <div class="container-lg">
+      <div class="row justify-content-center  align-items-center">
+        <!-- photo -->
+        <div class="col-md-5 text-center bg-primary d-none d-md-block">
+          <img class="img-fluid" src="{% static 'extra-images/listing-logo18.png' %}" alt="">
+        </div>
+
+        <!-- about company -->
+        <div class="col-md-5 text-center text-md-start  mt-5 m-start-2 p-2">
+          <h5>
+            <div class="display-2">Black-Belt</div>
+            <div class="display-6 text-muted">Display your coding skills</div>
+    
+          </h5>
+          <p class="lead my-4 text-muted">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita aperiam illo nihil. Dolorum amet!
+          </p>
+            <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+        </div>
+        <!-- end about -->
+
+
+
+      </div>
+    </div>
+  </section>
+  <hr>
+  <!-- pricing / cards -->
+  <section id="pricing" class="bg-light" >
+    <div class="container-lg">
+      <div class="text-center">
+        <h3>cards</h3>
+        <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="row my-5 align-items-center justify-content-center g-5">
+        <div class="col-8 col-lg-4 col-xl-3">
+          <div class="card border-0 " >
+            <div class="card-body text-center py-4">
+              <h4 class="card-title">card title</h4>
+              <p class="lead card-subtitle">subtitle</p>
+              <p class="display-5 my-4 text-primary fw-bold">$4.99 </p>
+              <p class="card-text px-5 d-none d-lg-block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dignissimos.</p>
+              <a href="" class="btn btn-outline-primary btn-lg mt-3">Go back</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-9 col-lg-4 ">
+          <div class="card border-primary border-2" >
+            <div class="card-header text-center text-primary">this is header
+            </div>
+            <div class="card-body text-center py-4">
+              <h4 class="card-title">card title</h4>
+              <p class="lead card-subtitle">subtitle</p>
+              <p class="display-4 my-4 text-primary fw-bold">$4.99 </p>
+              <p class="card-text px-5 d-none d-lg-block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dignissimos.</p>
+              <a href="" class="btn btn-outline-primary btn-lg mt-3">Go back</a>
+            </div>
+          </div>
+        </div>        
+        <div class="col-8 col-lg-4 col-xl-3">
+          <div class="card border-0 " >
+            <div class="card-body text-center py-4">
+              <h4 class="card-title">card title</h4>
+              <p class="lead card-subtitle">subtitle</p>
+              <p class="display-5 my-4 text-primary fw-bold">$4.99 </p>
+              <p class="card-text px-5 d-none d-lg-block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dignissimos.</p>
+              <a href="" class="btn btn-outline-primary btn-lg mt-3">Go back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <hr>
+  <!-- accordion / topics at a glance-->
+
+  <section id="topics" class=" border-primary">
+    <div class="container-md">
+      <div class="text-center">
+        <h2>Inside the book</h2>
+        <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="row my-5 g-5 justify-content-around align-items-center ">
+        <div class="col-6 col-lg-4">
+          <img src="{% static 'extra-images/banner-img.jpg' %}" alt="paid" style="width:200px">
+        </div>
+        <div class="col-lg-6">
+          <div id="chapters" class="accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter1">chapter1-  topics in zambales </button>
+              </h2>
+              <div id="chapter-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, quis porro. Repudiandae, accusantium vitae accusamus laborum recusandae sunt a voluptate dicta natus unde corrupti similique laboriosam placeat, numquam non cum.
+              </div>
+            </div>    
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="False" aria-controls="chapter2">Mining </button>
+              </h2>
+              <div id="chapter-2" class="accordion-collapse collapse " aria-labelledby="heading-2" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, quis porro. Repudiandae, accusantium vitae accusamus laborum recusandae sunt a voluptate dicta natus unde corrupti similique laboriosam placeat, numquam non cum.
+                </div>
+              </div>                
+  
+            </div>
+          </div>
+  
+  
+        </div>
+        <!-- accordion -->
+      </div>
+    </div>
+  </section>
+
+  <hr>
+  <!-- about  end -->
+  <section class="m1" id="prlinks" ></section>
+  <div class="container-lg my-5">
+    <div class="row  justify-content-center">
+      <div class="col-md-2">
+        <a class="btn btn-primary" href="{% url 'updateform' %}" role="button">update form </a>    
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-primary" href="{% url 'add_restaurant' %}" role="button">Add Restaurant</a>
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-primary" href="{% url 'restaurant_list' %}" role="button">Restaurant List</a>
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-primary" href="{% url 'add_rating' %}" role="button">Add Rating</a>
+      </div>
+
+      <div class="col-md-2">
+        <a class="btn btn-primary" href="{% url 'create_student' %}" role="button">Create Student</a>
+      </div>
+
+
+    </div>
+  </div>  
+  <hr>
+
+  <div class="container-lg my-5">
+    <h4>Bootstrap </h4>
+    <div class="row">
+      <div class="col-sm-4 col-lg-2">
+        <a href="{% url 'bootstrap_buttons' %}">Buttons</a>      
+      </div>
+      <div class="col-sm-4 col-lg-2">
+        <a href="{% url 'bootstrap_utility_classes' %}">Utility classes</a>
+      </div>
+      <div class="col-sm-4 col-lg-2">
+        <a href="{% url 'containers' %}">Containers</a>
+      </div>
+      <div class="col-sm-4 col-lg-2">
+        <a href="{% url 'grid' %}">Grid</a>
+      </div>
+      <div class="col-sm-4 col-lg-2">
+        <a href="{% url 'grid_layout' %}">Grid layout</a>
+      </div>
+      
+      <div class="col-sm-4 col-lg-2">
+        <a href="{% url 'cards' %}">Cards</a>
+      </div>
+  
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+
+
+
+{% endblock %}

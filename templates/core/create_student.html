@@ -1,0 +1,89 @@
+{% extends 'main_project/base.html'%}
+{% load static %}
+{% block content %}
+
+
+
+<div class="container">
+ 
+
+  <br>
+  <div class="container pt-5">
+    <h5>Student List</h5>
+    
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">studno</th>
+          <th scope="col">firstname</th>
+          <th scope="col">lastname</th>
+          <th scope="col">birthdate</th>          
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+ 
+          <td>{{student.studno}}</td>
+          <td>{{student.firstname}}</td>
+          <td>{{student.lastname}}</td>
+          <td>{{student.birthdate}}</td>
+        </tr>
+        {% endfor %}
+  
+      </tbody>
+    </table>
+  </div> 
+  <div>
+    {% if submitted %}
+      Create student was submitted successfuly !!!
+    {% else %}
+
+        <form action="" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Submit" class="btn btn-primary"></input>
+            </form>
+    {% endif %}
+  </div>
+
+  <!-- <form action="" method = 'POST'>
+    {% csrf_token %}
+    <div class="field-holder">
+      <label for="">Student No:</label>    {{form.studno}}
+    </div>
+    <div class="field-holder">
+      <label for="">First Name</label>    {{form.firstname}}
+    </div>
+
+    <div class="field-holder">
+      <label for="">Lastname Name</label>    {{form.firstname}}
+    </div>
+    <div class="field-holder">
+      <label for="">Birth Date</label>    {{form.birthdate}}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form> -->
+  
+  </div>
+
+
+
+  <br>
+  <div class="container">
+    <div class="buttons-choices">
+      <a class="btn btn-primary" href="{% url 'index' %}" role="button">Back</a>
+    </div>
+  
+  </div>
+
+
+</div>
+
+
+
+
+
+{% endblock %}

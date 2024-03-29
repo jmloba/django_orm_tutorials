@@ -1,0 +1,36 @@
+{% extends 'main_project/base.html'%}
+{% load static %}
+{% block content %}
+<!-- navbar -->
+
+<!-- main image -->
+<section id="intro" class="m-1">
+  <div class="container-lg">
+    <div class="row justify-content-center  align-items-center">
+      <div class="col-md-5 text-center text-md-start  mt-5 m-start-2 p-2">
+        <h5>
+          <div class="display-2">Black-Belt</div>
+          <div class="display-6 text-muted">Display your coding skills</div>
+  
+        </h5>
+        <p class="lead my-4 text-muted">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita aperiam illo nihil. Dolorum amet!
+        </p>
+          <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+      </div>
+      <div class="col-md-5 text-center bg-primary d-none d-md-block">
+          <img class="img-fluid" src="{% static 'extra-images/listing-logo18.png' %}" alt="">
+
+      </div>
+    </div>
+    <a href="{% url 'index' %}" class="btn btn-primary btn-lg">BAck to Main</a>
+
+  </div>
+
+</section>
+<!-- pricing plan   -->
+<!-- topics at a glance -->
+
+{% endblock %}
+
+

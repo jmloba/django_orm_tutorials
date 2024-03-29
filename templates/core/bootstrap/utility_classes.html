@@ -1,0 +1,53 @@
+{% extends 'main_project/base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <div class="bg-info">
+    <hr> 
+  <h4 class="j5-util m-1 p-2 ">utility classes</h4>  
+    <!-- margin and padding -->
+    <div class="section-div">
+      <h5 class="jhead-5 head-zz" >joven h5 status </h5>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore adipisci veniam modi ad delectus quam totam nostrum omnis, aspernatur vitae voluptatum consequatur quaerat, asperiores vel, perferendis cupiditate assumenda aliquam.</p>
+
+    </div>
+    <div class="bg-pri,a"></div>bg-primary
+    <div class="bg-primary m-1 p-1">small margin and padding </div>
+
+    <div class="bg-primary m-5 p-5">large margin and padding </div>
+
+    <div class="bg-primary my-3 px-5">margin in y direction and x direction</div>
+
+    <div class="bg-primary my-5 px-2">margin in y direction and x direction</div>
+
+    <div class="bg-secondary mt-5  mb-4  ps-5 pt-4 pe-3 pb-4"> m and p for each direction (ms=margin start) (me margin end )</div>
+
+  </div>
+  
+    <!-- borders -->
+    <div class="m-3 p-5 border"> default border</div>
+    <div class="m-3 p-3 border-top border-end"> individual border</div>
+    <div class="m-3 p-3 border-top border-end border-start border-success"> individual border</div>
+
+    <div class="m-3 p3 border-start border-danger border-5
+    ">thicker border</div>
+    <div class="m-3 p-3 rounded border border-2"> border rounded corners </div>
+    <div class="m-3 p-3 rounded-pill border border-5 border-danger bg-primary ">rounded pill</div>
+
+
+    <!-- box shadow -->
+    <div class="p-3 m-3 shadow-lg">      box shadow    </div>
+    <div class="p-3 m-3 shadow-sm"> box shadow  </div>
+    <div class="p-3 m-3 shadow"> box shadow  </div>
+    <!-- font-weight -->
+    <p class="fw-bold p-2 m1">font wieght</p>
+    <p class="fw-bolder p-2 m1">font wieght</p>
+    <p class=" p-2 m1">normal text</p>
+    <p class=" p-2 m1 fw-light">fone weight light</p>
+    <p class=" p-2 m1 fst-italic">italic</p>
+    <p class=" p-2 m1 fst-italic fw-light">italic and light</p>
+ 
+
+{% endblock %}

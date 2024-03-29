@@ -1,0 +1,65 @@
+{% extends 'main_project/base.html'%}
+{% load static %}
+{% block content %}
+
+
+
+<div class="container">
+ 
+
+  <br>
+  <div class="container pt-5">
+    
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">user</th>
+          <th scope="col">restaurant</th>
+          <th scope="col">rating</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in rating %}
+        <tr>
+ 
+          <td>{{item.user}}</td>
+          <td>{{item.restaurant}}</td>
+          <td>{{item.rating}}</td>
+        </tr>
+        {% endfor %}
+  
+      </tbody>
+    </table>
+  </div> 
+  <div class="container pt-5">
+    <div class="rating-form">
+      <form action="{% url 'add_rating'%} " method = 'POST'>
+        {% csrf_token %}
+        {{form}}
+     
+     
+        <button type="submit" class="btn btn-primary">Submit</button>
+  
+      </form>
+    </div>
+  </div>
+
+
+
+  <br>
+  <div class="container">
+    <div class="buttons-choices">
+      <a class="btn btn-primary" href="{% url 'index' %}" role="button">Back</a>
+    </div>
+  
+  </div>
+
+
+</div>
+
+
+
+
+
+{% endblock %}

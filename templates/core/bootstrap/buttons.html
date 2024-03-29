@@ -1,0 +1,41 @@
+{% extends 'main_project/base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <hr> 
+  <h5 class="text-danger">buttons</h5>  
+  <button class="btn btn-primary">Button</button>
+  <button class="btn btn-secondary">Button</button>
+
+  <!-- anchor tags as button    -->
+  <hr> 
+  <h4 class="text-danger">anchor tags</h4>
+  <h5><a href="">Anchor tags h3</a></h5>
+  <small><a href="">Anchor tags</a></small>
+  <a href="" class="btn btn-success">button success </a>
+
+  <!-- button- sizes -->
+  <hr> <h4 class="text-danger">button sizes</h4>
+  <button class="btn btn-lg btn-danger">button danger </button>
+  <button class="btn btn-sm btn-warning">button warning </button>
+
+  <!-- outlined style-->
+  <hr> <h4 class="text-primary">outlined style</h4>  
+  <button class="btn btn-outline">button outline</button>
+  <button class="btn btn-outline-secondary btn-lg">button outline</button>
+  <button class="btn btn-outline-primary btn-lg">button outline</button>
+
+  <!-- button groups -->
+  <hr>
+  <div>
+    <h3>button groups</h3>
+  </div>
+  <div class="btn-group">
+      <a href="" class="btn btn-primary">button 1</a>
+      <a href="" class="btn btn-warning">button 2</a>
+      <a href="" class="btn btn-success">button 3</a>
+  </div>
+</div>
+
+{% endblock %}

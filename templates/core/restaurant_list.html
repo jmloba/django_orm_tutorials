@@ -1,0 +1,41 @@
+{% extends 'main_project/base.html'%}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="title">
+    <h5>title : Restaurant List</h5>
+  </div>
+   <br>
+  <div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">name</th>
+          <th scope="col">date_opened</th>
+          <th scope="col">latitude</th>
+          <th scope="col">longitude</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for restaurant in restaurants %}
+        <tr>
+          <th scope="row">{{restaurant.name}}</th>
+          <td>{{restaurant.date_opened}}</td>
+          <td>{{restaurant.latitude}}</td>
+          <td>{{restaurant.longitude}}</td>
+        </tr>
+        {% endfor %}
+ 
+      </tbody>
+    </table>
+    
+    <a class="btn btn-primary" href="{% url 'index' %}" role="button">Back to main</a>
+
+
+  </div> 
+   
+</div>
+
+{% endblock %}
+
