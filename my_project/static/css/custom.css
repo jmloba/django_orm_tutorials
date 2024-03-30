@@ -7,73 +7,20 @@
 --button-hover:#A94438;
 
 --color-white :#FBF9F1;
-
 }
 
-@keyframes show-toast{
-  0%{bottom: -100%}
-  20% {bottom: 100px}
-  80% {bottom: 100px}
-  100% {bottom: -100px}
 
-}
-.custom-show-notification{
-  position : fixed;
-  bottom: 100%;
-  right: 20px;
-  animation-name: show-toast;
-  animation-duration : 8s;
-  z-index : 2000;
-}
-
-.btn {
-  padding: 5px 10px;
-  margin : 5px;
-  font-size: 12px;
-  cursor :pointer;
-  
-  }
-  
- select, 
- .main-search.fancy .field-holder input[type="text"] {
-  color: blue !important; 
-  font-weight: 
-  500;
-  }
-
-table > tbody > tr > td{
-  border :none !important;
-}
-
-#opening_hours_form  select{
- padding : 0 5px !important;
-
-
-}
-
-.btn-success.add-hour{
-  color:red;
-  width:120px;
-  padding :  5px 17px;
-}
-input.submit-button{
-  background-color: var(--linked-in-blue);
-  color : var(--color-white);
-  font-size: 16x;
-  border-radius :25px;
-  width : 120px;
-}
-input.submit-button:hover{
-  background-color: var(--button-hover);
-  color : yellow;
-  border-width: 1px;
-  border-color : yellow; 
- 
-}
 .head-zz{
-  background-color: rgb(8, 92, 12);
+  background-color: rgb(207, 158, 190);
   color : white;
 }
+.xx-text1{
+  background-color: rgb(226, 209, 216);
+  color : rgb(15, 37, 137);
+  margin: 25px 10px;
 
-
-
+}
+.xx-form{
+  background-color: rgb(204, 209, 61);
+  border-radius: 15px;
+}

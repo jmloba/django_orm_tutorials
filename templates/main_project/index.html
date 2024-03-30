@@ -1,7 +1,5 @@
 {% extends 'main_project/base.html'%}
-
 {% load static %}
-
 {% block content %}
 
 <div class="container">
@@ -10,10 +8,11 @@
     <div class="container-lg">
       <div class="row justify-content-center  align-items-center">
         <!-- photo -->
-        <div class="col-md-5 text-center bg-primary d-none d-md-block">
-          <img class="img-fluid" src="{% static 'extra-images/listing-logo18.png' %}" alt="">
+        <div class="col-md-5 text-center  d-none d-md-block">
+          <span class="tt" data-bs-placement="bottom" title="hovering on this">
+            <img class="img-fluid" src="{% static 'images/math01.jpg' %}" alt="book">
+          </span>
         </div>
-
         <!-- about company -->
         <div class="col-md-5 text-center text-md-start  mt-5 m-start-2 p-2">
           <h5>
@@ -91,11 +90,11 @@
         <h2>Inside the book</h2>
         <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
-      <div class="row my-5 g-5 justify-content-around align-items-center ">
-        <div class="col-6 col-lg-4">
-          <img src="{% static 'extra-images/banner-img.jpg' %}" alt="paid" style="width:200px">
+      <div class="row my-5 g-2 justify-content-around align-items-center ">
+        <div class="col-6 col-lg-4 ">
+          <img src="{% static 'images/neuro.jpg' %}" alt="paid" style="width:200px">
         </div>
-        <div class="col-lg-6">
+        <div class="col-6 col-lg-8">
           <div id="chapters" class="accordion">
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading-1">
@@ -126,9 +125,184 @@
       </div>
     </div>
   </section>
+  <hr>
+  <!-- reviews -->
+  <section id="reviews" class="bg-light">
+    <div class="container-lg">
+      <!-- review tittle -->
+      <div class="review-title text-center">
+        <h3><i class="bi bi-card-checklist"></i>Book Review</h3>
+        <p class="lead">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="list-group">
+            <div class="list-group-items py-3 align-items-center">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <h3 class="mb-1">item 1</h3>
+              <p class="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque ipsum dolor facere quasi. Sequi soluta iure hic vitae!
+              </p> <i class="bi bi-plus-circle">bootstrap icon</i>
+              <small class="bg-success ">Review by xx1</small> 
+              <hr>
+            </div>
+            <div class="list-group-items py-3 ">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <h3 class="mb-1">
+                
+                item 1</h3>
+              <p class="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque ipsum dolor facere quasi. Sequi soluta iure hic vitae!
+              </p> 
+              <small>Review by xx1</small> 
+            </div>
+            <div class="list-group-items py-3 ">
+              <h3 class="mb-1">item 1</h3>
+              <p class="mb-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque ipsum dolor facere quasi. Sequi soluta iure hic vitae!
+              </p> 
+              <small>Review by xx1</small> 
+            </div>
+           
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <hr>
+  <!-- contact forms -->
+  <!-- form-contol, form-label , form-select, input-group, input-group-text  -->
+  <section id="contact">
+    <div class="container-lg">
+      <div class="text-center ">
+        <h3 class ="xx-text1">Get in touch</h3>
+        <p class="lead">Questions to ask? Fill out the form to contact me directly. </p>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="xx-form col-lg-6 py-3">
+          <form action="" >
+            <label for="email" class="form-label">Email Address</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text"> 
+                <i class="bi bi-envelope-at"></i>
+              </span>
+          
+              <input type="email" id="email" class="form-control" placeholder="ie. xx@y.com">
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="tooltip email">
+
+                <i class="bi bi-envelope-at"></i>
+              </span>
+              </span>
+            </div>
+
+
+            <label for="name" class="form-label">Name:</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-file-earmark-person"></i>
+              </span>
+              <input type="text" class="form-control" id="name" placeholder="ie. John">
+            </div>
+
+
+            <label for="subject" class="form-label">What is your question:</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <!-- <i class="bi bi-chat-left-dots-fill"></i> -->
+                <i class="bi bi-chat-heart-fill"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected> Pricing query</option>
+                <option value="content">Content Query</option>
+                <option value="other-query">Other Query</option>
+  
+              </select>
+            </div>  
+
+            <div class="form-floating mb-4 mt-5">
+              <textarea class="form-control" name="query" id="query" style="height:100px; "
+              ></textarea>
+              <label for="query" >Query</label>
+            </div>
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+            
+
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <hr>
+
+
+  <section class="bg-light">
+    <div class="container-lg">
+      <div class="bg-info text-center">
+        <h2>Stay in the loop</h2>
+        <p class="lead">Get the latest updates</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="text-muted my-4">Tesing testing.
+          </p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">REgister for Updates</button>
+
+        </div>
+
+      </div>
+    </div>  
+
+  </section>
+  <!-- get updates / modal trigger -->
+  <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog" style="background-color: azure;">
+      <div class="model-content">
+        <div class="modal-header">
+          <h5 class="modal-title" 
+          id="modal-title" 
+          style="color:red;">Get the latest updates</h5>
+          <button type="button" class="button-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-light">
+          <p>paragraph to appear.</p>
+          <label for="modal-email" class="form-label">You email address :</label>
+          <input type="email" class="form-control" id="modal-email" placeholder="ie. jj@email.com">
+        </div>
+        <div class="model-footer">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
 
   <hr>
-  <!-- about  end -->
+
+
+  <!--   end -->
   <section class="m1" id="prlinks" ></section>
   <div class="container-lg my-5">
     <div class="row  justify-content-center">
