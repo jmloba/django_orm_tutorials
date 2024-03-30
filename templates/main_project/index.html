@@ -24,6 +24,8 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita aperiam illo nihil. Dolorum amet!
           </p>
             <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+            <!-- -- open sidebar -- -->
+            <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">Explore my other books</a>
         </div>
         <!-- end about -->
 
@@ -255,9 +257,9 @@
   <hr>
 
 
-  <section class="bg-light">
+  <section class="bg-altlight">
     <div class="container-lg">
-      <div class="bg-info text-center">
+      <div class="bg-altdark text-center">
         <h2>Stay in the loop</h2>
         <p class="lead">Get the latest updates</p>
       </div>
@@ -301,6 +303,33 @@
 
   <hr>
 
+<!-- -- off canvas / sidebar -- -->
+<div id="sidebar" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="sidebar-label">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebar-label">My other books</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam nobis ea dolor ipsam a. Tenetur ullam voluptate consequatur, rem, aliquid, pariatur odit quis adipisci cum placeat suscipit ducimus iusto expedita!</p> 
+  <!-- ---- dropdowns --- -->
+  <div class="dropdown mt-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown">Choose a book</button>
+    <div class="dropdown-menu" aria-labelledby="book-dropdown">
+      <ul class ="list-unstyled ">
+        <li><a href="#" class="dropdown-item">Becom superhero</a></li>
+        <li><a href="#" class="dropdown-item">now and then </a></li>
+        <li><a href="#" class="dropdown-item">third option now and then </a></li>
+
+      </ul>
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+</div>
 
   <!--   end -->
   <section class="m1" id="prlinks" ></section>
